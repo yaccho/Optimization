@@ -55,3 +55,92 @@ ezplot(f_3);
 hold on
 fgraph = fcontour(f,'-g');
 %}
+
+%%
+%%for Task1-2
+
+clf
+
+syms x_1 x_2
+%f =@(x_1,x_2) -x_1 - 0.5*x_2;
+
+f_1 = @(x_1,x_2) -x_1 + 2*x_2;
+f_2 = @(x_1,x_2) -x_1 + 2*x_2 + 2;
+f_3 = @(x_1,x_2) -x_1 + 2*x_2 - 2;
+f_05 = @(x_1,x_2) -x_1 + 2*x_2 + 1;
+f_15 = @(x_1,x_2) -x_1 + 2*x_2 - 1;
+
+g_1 = @(x_1,x_2) -2*x_1 + x_2;
+g_2 = @(x_1,x_2) -2*x_1 + 3*x_2 - 6;
+g_3 = @(x_1,x_2) x_1;
+g_4 = @(x_1,x_2) x_2;
+
+fimplicit(g_1,'-k');
+hold on
+fimplicit(g_2,'-g');
+hold on
+fimplicit(g_3,'-r');
+hold on
+fimplicit(g_4,'-r');
+legend("g1 = 0","g2 = 0","x_1 = 0","x_2 = 0");
+
+hold on
+fimplicit(f_1,'-b','HandleVisibility','off');
+hold on
+fimplicit(f_2,'-b','HandleVisibility','off');
+hold on
+fimplicit(f_3,'-b','HandleVisibility','off');
+hold on
+fimplicit(f_05,'-b','HandleVisibility','off');
+hold on
+fimplicit(f_15,'-b','HandleVisibility','off');
+
+
+axis([-0.5 2 -0.5 5]);
+title("opt");
+
+%%
+%%for Task1-3
+
+
+clf
+
+syms x_1 x_2
+%f =@(x_1,x_2) -x_1 - 0.5*x_2;
+
+f_1 = @(x_1,x_2) x_1 + 2*x_2 - 4;
+f_2 = @(x_1,x_2) x_1 + 2*x_2 - 6;
+f_3 = @(x_1,x_2) x_1 + 2*x_2 - 8;
+
+g_1 = @(x_1,x_2) 3*x_1 + 2*x_2 - 6;
+g_2 = @(x_1,x_2) 2*x_1 + 3*x_2 - 12;
+g_3 = @(x_1,x_2) x_1;
+g_4 = @(x_1,x_2) x_2;
+g_5 = @(x_1,x_2) x_1 - 5;
+g_6 = @(x_1,x_2) x_2 - 5;
+
+
+fimplicit(g_1,'-k');
+hold on
+fimplicit(g_2,'-g');
+hold on
+fimplicit(g_3,'-r');
+hold on
+fimplicit(g_4,'-r');
+hold on
+fimplicit(g_5,'-r');
+hold on
+fimplicit(g_6,'-r');
+
+legend("g1 = 0","g2 = 0","x_1 = 0","x_2 = 0","x_1 = 5","x_2 = 5");
+
+hold on
+fimplicit(f_1,'-b','HandleVisibility','off');
+hold on
+fimplicit(f_2,'-b','HandleVisibility','off');
+hold on
+fimplicit(f_3,'-b','HandleVisibility','off');
+
+
+axis([-0.5 6 -0.5 6]);
+title("opt");
