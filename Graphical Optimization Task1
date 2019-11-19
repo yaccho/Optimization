@@ -1,5 +1,6 @@
 %%
 %%for Task1_1
+%%
 clf
 
 syms x_1 x_2
